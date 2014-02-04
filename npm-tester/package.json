@@ -1,0 +1,7 @@
+{
+    "name": "somename",
+    "version": "1.0.0",
+    "dependencies": {
+         "jshint": "2.4.3"
+    }
+}
