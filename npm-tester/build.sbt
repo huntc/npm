@@ -1,6 +1,7 @@
 resolvers ++= Seq(
   Resolver.sonatypeRepo("snapshots"),
-  Resolver.mavenLocal
+  Resolver.mavenLocal,
+  "Typesafe Snapshots Repository" at "http://repo.typesafe.com/typesafe/snapshots/"
 )
 
 libraryDependencies += "io.apigee.trireme" % "trireme-core" % "0.7.0-SNAPSHOT"

@@ -17,7 +17,8 @@ libraryDependencies ++= Seq(
 
 resolvers ++= Seq(
   Resolver.sonatypeRepo("snapshots"),
-  Resolver.mavenLocal
+  Resolver.mavenLocal,
+  "Typesafe Snapshots Repository" at "http://repo.typesafe.com/typesafe/snapshots/"
 )
 
 publishTo := {
