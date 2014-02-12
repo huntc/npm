@@ -26,7 +26,7 @@ class Npm(engine: ActorRef, npmFile: File) {
 
   private def invokeNpm(args: ListBuffer[String])
                        (implicit timeout: Timeout): Future[JsExecutionResult] = {
-    (engine ? Engine.ExecuteJs(npmFile, args.to[immutable.Seq])).mapTo[JsExecutionResult]
+    (engine ? Engine.ExecuteJs(npmFile, args.to[immutable.Seq], timeout.duration)).mapTo[JsExecutionResult]
   }
 }
 

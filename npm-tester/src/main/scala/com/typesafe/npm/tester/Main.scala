@@ -19,7 +19,7 @@ object Main {
       System.exit(1)
     }
 
-    val engine = system.actorOf(Node.props(), "engine")
+    val engine = system.actorOf(Trireme.props(), "engine")
     val to = new File(new File("target"), "webjars")
     val cacheFile = new File(to, "extraction-cache")
     val npm = new Npm(engine, NpmLoader.load(to, cacheFile, Main.getClass.getClassLoader))
